@@ -10,7 +10,6 @@ class Mastermind:
         self._code = []
         for i in range(self._codeLength):
             self._code.append(random.randint(0, 9))
-        print("Code: [# # # #]")
 
     def getGuess(self):
         inpList = []
@@ -68,9 +67,9 @@ class Mastermind:
     def spill(self):
         print("\nWelcome to Mastermind!")
         print("- Black circle = one guessed num is correct,")
-        print("  and is in the RIGHT place")
+        print("  and is in the right place")
         print("- White circle = one guessed num is correct,")
-        print("  but is in the WRONG place")
+        print("  but is in the wrong place")
         print("- The code concists of 4 digits from 0-9")
         print("- Type 'q' to give up")
 
