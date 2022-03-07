@@ -10,7 +10,7 @@ class Mastermind:
         self._code = []
         for i in range(self._codeLength):
             self._code.append(random.randint(0, 9))
-        print(self._code)
+        print("Code: [# # # #]")
 
     def getGuess(self):
         inpList = []
@@ -133,4 +133,5 @@ def main():
     m.spill()
 
 
-main()
+if (__name__ == "__main__"):
+    main()
