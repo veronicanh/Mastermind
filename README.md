@@ -5,6 +5,7 @@ En tall-versjon av det populære gjette-spillet
 `$ python3 Mastermind.py`
 
 ## Eksempel-kjøring
+```
 Code: [# # # #]
 
 Welcome to Mastermind!
@@ -42,3 +43,4 @@ Welcome to Mastermind!
  └─────────┘
 You guessed the code correctly!
 You used 18 guesses.
+
