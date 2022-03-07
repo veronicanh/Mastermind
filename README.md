@@ -18,7 +18,6 @@ Welcome to Mastermind!
  ┌─────────┐
  │ ¤ ¤ ¤ ¤ │
  ├─────────┤
- ├ ERROR   ┼ You need to type 4 digits
  ├ 1 2 3 4 ┼ ○ ○ 
  ├ 1 2 5 6 ┼ ○ 
  ├ 3 4 7 8 ┼ ● ○ 
@@ -31,8 +30,8 @@ Welcome to Mastermind!
  ├ 3 4 4 8 ┼ ● ● 
  ├ 3 8 4 3 ┼ ● ● ● 
  ├ 1 1 1 1 ┼ 
- ├ 2 2 2 2 ┼ 
  ├ ERROR   ┼ You need to type 4 digits
+ ├ 2 2 2 2 ┼ 
  ├ 3 3 3 3 ┼ ● ● 
  ├ 4 4 4 4 ┼ ● 
  ├ 5 5 5 5 ┼ 
