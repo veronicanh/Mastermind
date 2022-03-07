@@ -66,7 +66,7 @@ class Mastermind:
         print(hint)
 
     def spill(self):
-        print("\nWelcome to MasterMind!")
+        print("\nWelcome to Mastermind!")
         print("- Black circle = one guessed num is correct,")
         print("  and is in the RIGHT place")
         print("- White circle = one guessed num is correct,")
@@ -129,7 +129,7 @@ class Mastermind:
 
 def main():
     codeLength = 4
-    m = MasterMind(codeLength)
+    m = Mastermind(codeLength)
     m.spill()
 
 
