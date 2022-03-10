@@ -2,6 +2,9 @@ import random
 import sys
 
 
+# TODO: Få back-space til å fungere
+# TODO: Få pil-opp til å fungere
+
 class Mastermind:
     def __init__(self, codeLength):
         self._numOfguesses = 0
@@ -13,7 +16,7 @@ class Mastermind:
 
     def getGuess(self):
         inpList = []
-        inp = input(" ├ ").strip().replace(" ", "").replace(",", "")
+        inp = input("   ├ ").strip().replace(" ", "").replace(",", "")
 
         # Option to quit game
         if "q" in inp:
@@ -25,7 +28,7 @@ class Mastermind:
         for s in inp:
             inpStr += s + " "
         sys.stdout.write("\033[F")
-        print(" ├ " + inpStr + "┼", end=" ")
+        print("   ├ " + inpStr + "┼", end=" ")
 
         for siffer in inp:
             inpList.append(int(siffer))
@@ -65,19 +68,19 @@ class Mastermind:
         print(hint)
 
     def spill(self):
-        print("\nWelcome to Mastermind!")
-        print("- Black circle = one guessed num is correct,")
-        print("  and is in the right place")
-        print("- White circle = one guessed num is correct,")
-        print("  but is in the wrong place")
-        print("- The code concists of 4 digits from 0-9")
-        print("- Type 'q' to give up")
+        print("\n Welcome to Mastermind!")
+        print(" - Black circle = one guessed num is correct,")
+        print("   and is in the right place")
+        print(" - White circle = one guessed num is correct,")
+        print("   but is in the wrong place")
+        print(" - The code concists of 4 digits from 0-9")
+        print(" - Type 'q' to give up")
 
         #self._codeLength = int(input("Choose code length: "))
 
-        print(" ┌─" + "──" * self._codeLength + "┐")
-        print(" │ " + "¤ " * self._codeLength + "│")
-        print(" ├─" + "──" * self._codeLength + "┤")
+        print("   ┌─" + "──" * self._codeLength + "┐")
+        print("   │ " + "¤ " * self._codeLength + "│")
+        print("   ├─" + "──" * self._codeLength + "┤")
 
         vunnet = False
         ferdig = False
@@ -96,9 +99,9 @@ class Mastermind:
         codeStr = ""
         for tall in self._code:
             codeStr += str(tall) + " "
-        print(" ├─" + "──" * self._codeLength + "┤")
-        print(" │ " + codeStr + "│")
-        print(" └─" + "──" * self._codeLength + "┘")
+        print("   ├─" + "──" * self._codeLength + "┤")
+        print("   │ " + codeStr + "│")
+        print("   └─" + "──" * self._codeLength + "┘")
         if vunnet:
             print("You guessed the code correctly!")
             print("You used", self._numOfguesses, "guesses.")
@@ -109,13 +112,13 @@ class Mastermind:
         print()
         sys.stdout.write("\033[F")
         errorStr = "ERROR"
-        msg = " ├ "
+        msg = "   ├ "
         for i in range(2 * self._codeLength - 1):
             if i < len(errorStr):
                 msg += errorStr[i]
             else:
                 msg += " "
-        msg += " ┼ "
+        msg += "   ┼ "
 
         if type(error) is IndexError:
             print(msg + "You need to type " + str(self._codeLength) +
